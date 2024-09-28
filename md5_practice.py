@@ -1,3 +1,4 @@
+import os
 import hashlib
 
 def calculate_md5(file_path):
@@ -19,7 +20,11 @@ def verify_file(file_path, known_md5):
         print(f"{file_path}: MD5 checksum does not match.")
 
 
-file_path = ""
-known_md5 = ""
+file_path = "example.txt"
+known_md5 = "5d41402abc4b2a76b9719d911017c592"
+
+print(os.getcwd())
+os.chdir("md5_practice")
+print(os.getcwd())
 
 verify_file(file_path, known_md5)
